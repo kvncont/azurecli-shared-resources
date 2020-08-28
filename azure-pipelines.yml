@@ -14,5 +14,4 @@ steps:
     scriptType: 'bash'
     scriptLocation: 'scriptPath'
     scriptPath: './initial_config.sh'
-    arguments: '$(RESOURCE_GROUP) $(STORAGE_ACCOUNT) $(CONTAINER_NAME)'
   displayName: 'Create shared resources'
