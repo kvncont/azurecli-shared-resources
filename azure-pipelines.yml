@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+- group: azurecli-shared-resources
+
+steps:
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'Development'
+    scriptType: 'bash'
+    scriptLocation: 'scriptPath'
+    scriptPath: './initial_config.sh'
+    arguments: '$(RESOURCE_GROUP) $(STORAGE_ACCOUNT) $(CONTAINER_NAME)'
+  displayName: 'Create shared resources'
