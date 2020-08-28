@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Resources
-RESOURCE_GROUP_NAME=$1
-STORAGE_ACCOUNT_NAME=$2
-CONTAINER_NAME=$3
-REGION=eastus2
+# RESOURCE_GROUP_NAME=$1
+# STORAGE_ACCOUNT_NAME=$2
+# CONTAINER_NAME=$3
+# REGION=eastus2
 
 # Create resource group for terraform state
 echo "Validating if resource group exists..."
