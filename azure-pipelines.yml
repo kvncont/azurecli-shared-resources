@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-- group: azurecli-shared-resources
+- group: global-vars
 
 steps:
 - task: AzureCLI@2
